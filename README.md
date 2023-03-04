@@ -6,7 +6,7 @@
 
 
 ## Architecture
-![](20230303192646.png)
+![Architecture](https://raw.githubusercontent.com/jye-aviatrix/terraform-azurerm-azure-vnet-hub-nva-and-spoke-with-onprem-simulation/master/20230303192646.png)
 
 ## Tested environment
 
