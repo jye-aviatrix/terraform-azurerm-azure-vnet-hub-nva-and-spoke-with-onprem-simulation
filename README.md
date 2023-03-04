@@ -170,3 +170,18 @@ Name                                                                            
 
  OVERALL TOTAL                                                                                                                                            $988.71
 ```
+
+## Reference:
+- This module deploy Azure vNet, subnet and route tables, you may seletive deploy test instance in the subnet.
+
+   https://github.com/jye-aviatrix/terraform-azurerm-azure-vnet
+
+- This Repo will create Palo Alto Networks VM-Series firewalls in Azure, it will also bootstrap the Firewall, as well as provision Azure Internal Load Balancer.
+
+   https://github.com/jye-aviatrix/terraform-azurerm-panos-azure-nva
+
+- This module deploy Azure VNG to existing vNet. It will also deploy Cisco CSR to a new vNet simulate on-prem environment. IPSec/ BGP Site to Site will be established between CSR and VNG.
+
+   https://github.com/jye-aviatrix/terraform-azurerm-vng-to-csr-ipsec-bgp
+
+
