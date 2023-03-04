@@ -1,6 +1,6 @@
 module "ew_palo_hub" {
   source              = "jye-aviatrix/panos-azure-nva/azurerm"
-  version             = "1.0.8"
+  version             = "1.0.9"
   palo_vm_count       = 1
   palo_vm_name        = "ewpan"
   region              = var.region
@@ -14,7 +14,7 @@ module "ew_palo_hub" {
 
 module "egress_palo_hub" {
   source              = "jye-aviatrix/panos-azure-nva/azurerm"
-  version             = "1.0.8"
+  version             = "1.0.9"
   palo_vm_count       = 1
   palo_vm_name        = "egresspan"
   region              = var.region
@@ -26,9 +26,17 @@ module "egress_palo_hub" {
   trust_cidr          = "10.0.32.128/26"
 }
 
+output "ew_palo" {
+  value = module.ew_palo_hub
+}
+
+output "egress_palo" {
+  value = module.egress_palo_hub
+}
+
 module "vng-to-csr-ipsec-bgp" {
   source                           = "jye-aviatrix/vng-to-csr-ipsec-bgp/azurerm"
-  version                          = "1.0.1"
+  version                          = "1.0.2"
   public_key_file                  = var.public_key_file
   vng_rg_name                      = module.ew_palo_hub.resource_group_name
   vng_subnet_cidr                  = "10.0.16.192/27"
