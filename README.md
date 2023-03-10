@@ -19,12 +19,6 @@ on linux_amd64
 + provider registry.terraform.io/hashicorp/random v3.4.3
 ```
 
-## Run terraform apply in three phrases
-> **IMPORTANT!**  
-- Phrase one, in main.tf, before line 120, we are creating E/W Palo vNet, Egress vNet and Spoke vNets first
-- Phrase two, after first terraform apply, uncomment line 120 to 137, then run terraform apply again. This section of code use data to read vNet/RG created by first portion of code. Hence need to be run after the first portion is complete
-- Phrase three, after second terraform apply, uncomment line 140 to end, then run terraform apply once more. This last section create vNet peering and it's looing for VNG created by phrase two
-
 
 ## Estimated cost
 
